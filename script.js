@@ -33,7 +33,6 @@ let blobsNodeList = document.querySelectorAll('.blob');
 let blobsArray = Array.from(blobsNodeList);
 
 blobsArray.forEach(function(blob, index) {
-    if (blob.classList.contains(project))
     blob.addEventListener('click', () => {
         let contentTitle = blob.getAttribute('data-title');
         let contentImageSrc = blob.getAttribute('data-image-src');
@@ -43,3 +42,7 @@ blobsArray.forEach(function(blob, index) {
         newProjectContent(contentTitle, contentImageSrc, contentDescription, contentWebsite, contentGithub)
     })
 })
+
+
+
+let blobsNumber = blobsArray.length;

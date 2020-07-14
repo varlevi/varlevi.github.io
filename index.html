@@ -7,35 +7,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>
-        <div class="blobs">
-            <div class="blob" id="shade-swash-blob" data-title="ShadeSwash" data-image-src="images/shadeswash.svg" data-description="ShadeSwash is a simple web app design to make finding color shades easy and intuitive. Features like dark mode and support for color standards like RGB and HEX make it easy to use and help make sure you find the best shade of a color." data-website="https://shadeswash.netlify.app" data-github="https://github.com/varlevi/ShadeSwash">
-                <p>ShadeSwash</p>
-            </div>
-            <div class="blob" id="vs-code-blob" data-title="Personal VS Code Theme" data-image-src="" data-description="">
-                <p>VS Code Theme</p>
-            </div>
-            <div class="blob" id="color-by-number-blob" data-title="" data-image-src="" data-description="">
-                <p>Color-By-Number Mosaic</p>
-            </div>
-            <div class="blob" id="physics-calc-blob" data-title="" data-image-src="" data-description="">
-                <p>Physics Calculator</p>
-            </div>
+    <div class="blobs">
+        <div class="blob" id="shade-swash-blob" data-title="ShadeSwash" data-image-src="images/shadeswash.svg" data-description="ShadeSwash is a simple web app design to make finding color shades easy and intuitive. Features like dark mode and support for color standards like RGB and HEX make it easy to use and help make sure you find the best shade of a color." data-website="https://shadeswash.netlify.app" data-github="https://github.com/varlevi/ShadeSwash">
+            <p>ShadeSwash</p>
         </div>
+        <div class="blob" id="color-by-number-blob" data-title="" data-image-src="" data-description="">
+            <p>Color-By-Number Mosaic</p>
+        </div>
+        <div class="blob" id="physics-calc-blob" data-title="" data-image-src="" data-description="">
+            <p>Physics Calculator</p>
+        </div>
+        <div class="blob" id="about-blob" data-title="About" data-image-src="" data-description="">
+            <p>About</p>
+        </div>
+    </div>
 
-        <div id="content">
-        </div>
-          
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" hidden>
-            <defs>
-              <filter id="goo">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-                <feBlend in="SourceGraphic" in2="goo" />
-              </filter>
-            </defs>
-          </svg>
-    </main>
+    <div id="content">
+    </div>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" hidden>
+        <defs>
+            <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+        </defs>
+        </svg>
     <script src="script.js"></script>
 </body>
 </html>

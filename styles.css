@@ -14,22 +14,7 @@
     --blue-green: #348464;
 }
 
-svg {
-    visibility: hidden;
-}
-
-html,body {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: none;
-}
-
-body {
-    min-height: 100%;
-}
-
-/* Background */
+/* LAYOUT */
 
 html { 
     background: var(--dark); 
@@ -39,7 +24,63 @@ html {
     background-size: cover;
 }
 
-/*-- Fonts --*/
+.content > p > a {
+    pointer-events: none;
+    cursor: cell;
+    text-decoration: none;
+    color: white;
+}
+
+.blobs{
+    filter: url('#goo');
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.blob {
+    background: var(--light);
+    line-height:100px;
+    text-align:center;
+    color:white;
+    font-size:40px;
+    border-radius: 100%;
+    animation: rotation 1s infinite ease-in-out;
+    padding: 2vw;
+    width: 15vw;
+    height: 15vw;
+    cursor: pointer;
+    transition: scale 0.5s ease-in-out;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.blob:hover {
+    scale: 1.2;
+}
+
+.blob > p {
+    font-size: 2.75vw;
+    color: var(--dark);
+    line-height: 1em;
+}
+
+/* IMAGES */
+
+svg {
+    visibility: hidden;
+}
+
+img {
+    object-fit: cover;
+    width: 5em;
+    margin: auto;
+    display: block;
+}
+
+/* FONTS */
 
 h1, h2, h3, h4, h5, h6, p {
     font-family: 
@@ -70,75 +111,7 @@ p {
     margin: 0;
 }
 
-main {
-
-    display: grid;
-    grid-template-columns: 20% auto;
-    grid-template-rows: 100% 0;
-    grid-gap: 10px;
-    padding: 10px;
-}
-
-.content > p > a {
-    pointer-events: none;
-    cursor: cell;
-    text-decoration: none;
-    color: white;
-}
-
-.blobs{
-    filter: url('#goo');
-    justify-items: center;
-    display: grid;
-    margin: 0.5em 0;
-}
-
-:root {
-    --dist-x: 65px;
-    --dist-y: 65px;
-}
-
-.blob {
-    margin: 10px auto;
-    display: block;
-    background: var(--light);
-    line-height:100px;
-    text-align:center;
-    color:white;
-    font-size:40px;
-    border-radius:100%;
-    animation: rotation 1s infinite ease-in-out;
-    display: grid;
-    padding: 30%;
-    width: 0.8em;
-    height: 0.8em;
-    cursor: pointer;
-    transition: scale 0.5s ease-in-out;
-}
-
-.blob:hover {
-    scale: 1.2;
-}
-
-.blob > p {
-    font-size: 2vw;
-    color: black;
-}
-
-.blob > p {
-    justify-self: center;
-    position: absolute;
-    z-index: 1;
-    align-self: center;
-    line-height: 1em;
-}
-
-img {
-    object-fit: cover;
-    width: 5em;
-    margin: auto;
-    display: block;
-}
+/* ANIMATIONS */
 
 @keyframes rotation {
     from {
