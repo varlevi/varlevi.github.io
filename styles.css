@@ -79,6 +79,13 @@ main {
     padding: 10px;
 }
 
+.content > p > a {
+    pointer-events: none;
+    cursor: cell;
+    text-decoration: none;
+    color: white;
+}
+
 .blobs{
     filter: url('#goo');
     justify-items: center;
