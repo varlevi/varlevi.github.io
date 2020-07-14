@@ -1,30 +1,32 @@
-const shadeswash = document.querySelector('#shade-swash-blob');
-const vscode = document.querySelector('#vs-code-blob');
-const colorbynumber = document.querySelector('#color-by-number-blob');
-const physicscalc = document.querySelector('#physics-calc-blob');
+// const shadeswash = document.querySelector('#shade-swash-blob');
+// const vscode = document.querySelector('#vs-code-blob');
+// const colorbynumber = document.querySelector('#color-by-number-blob');
+// const physicscalc = document.querySelector('#physics-calc-blob');
 const contentcontainer = document.querySelector('#content');
-let contentState = false;
+let contentOpen = false;
 
-const newContent = (title, iconSrc, description) => {
-    if (contentState == true) {
-      let content = contentcontainer;
-      let image = `<img src="${iconSrc}">`;
-      content.innerHTML += image;
-      content.innerHTML += `<h2>${title}</h2>`;
-      content.innerHTML += description;
-      content.classList += "content";
-      //contentcontainer.appendChild(content);
+function newContent(title, iconSrc, description) {
+    if (contentOpen = false) {
+        document.querySelectorAll('.content')[0].remove();
     } else {
-      document.getElementsByClassName('content')[0].remove();
+        contentOpen = true;
     }
+    let content = contentcontainer;
+    let icon = `<img src="${iconSrc}">`;
+    content.innerHTML += icon;
+    content.innerHTML += `<h2>${title}</h2>`;
+    content.innerHTML += `<p>${description}</p>`;
+    content.classList += "content";
   }
 
-shadeswash.addEventListener('click', () => {
-    contentState = !contentState;
-    newContent('About', "icons/shadeswash.svg", `<h4>Project Info</h4><p>ShadeSwash was created in 2019 and is maintained by varlevi. It was created in order to provide developers and designers with a simple, well-designed tool for finding color shades.</p>`);
-})
+let blobsNodeList = document.querySelectorAll('.blob');
+let blobsArray = Array.from(blobsNodeList);
 
-vscode.addEventListener('click', () => {
-    contentState = !contentState;
-    newContent('About', "shade-swash.png", `<h4>Project Info</h4><p>ShadeSwash was created in 2019 and is maintained by varlevi. It was created in order to provide developers and designers with a simple, well-designed tool for finding color shades.</p>`);
+blobsArray.forEach(function(blob, index) {
+    blob.addEventListener('click', () => {
+        let contentTitle = blob.getAttribute('data-title');
+        let contentIconSrc = blob.getAttribute('data-icon-src');
+        let contentDescription = blob.getAttribute('data-description');
+        newContent(blob.getAttribute('data-title'), blob.getAttribute('data-icon-src'), blob.getAttribute('data-description'))
+    })
 })
