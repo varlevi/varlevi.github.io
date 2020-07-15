@@ -9,21 +9,68 @@
 </head>
 <body>
     <div class="blobs">
-        <div class="blob" id="shade-swash-blob" data-title="ShadeSwash" data-image-src="images/shadeswash.svg" data-description="ShadeSwash is a simple web app design to make finding color shades easy and intuitive. Features like dark mode and support for color standards like RGB and HEX make it easy to use and help make sure you find the best shade of a color." data-website="https://shadeswash.netlify.app" data-github="https://github.com/varlevi/ShadeSwash">
+        <div class="blob" id="home-blob">
+            <p>Home</p>
+        </div>
+        <div class="blob" id="shade-swash-blob">
             <p>ShadeSwash</p>
         </div>
-        <div class="blob" id="color-by-number-blob" data-title="Color-By-Number Mosaic" data-image-src="" data-description="It's COOL!">
+        <div class="blob" id="color-by-number-blob">
             <p>Color-By-Number Mosaic</p>
         </div>
-        <div class="blob" id="physics-calc-blob" data-title="" data-image-src="" data-description="">
+        <div class="blob" id="physics-calc-blob">
             <p>Physics Calculator</p>
-        </div>
-        <div class="blob" id="about-blob" data-title="About" data-image-src="" data-description="">
-            <p>About</p>
         </div>
     </div>
 
-    <div id="content">
+    <div id="contentcontainer">
+        <div class="content" id="home-content">
+            <section class="header">
+                <h1>Welcome to The Directory</h1>
+            </section>
+            <section class="description">
+                <p>Hi! I'm Varlevi, a design-conscious frontend developer with a love for all things Open Source. The Directory is just a little site where you can learn about and find links to all my best projects! Enjoy!</p>
+            </section>
+            <section class="links">
+                <p>GitHub: <a href="https://github.com/varlevi">https://github.com/varlevi</a></p>
+            </section>
+        </div>
+        <div class="content hidden" id="shade-swash-content">
+            <section class="header">
+                <h2><span>ShadeSwash</span></h2>
+            </section>
+            <section class="description">
+                <p>ShadeSwash is a simple web app design to make finding color shades easy and intuitive. Features like dark mode and support for color standards like RGB and HEX make it easy to use and help make sure you find the best shade of a color.</p>
+            </section>
+            <section class="links">
+                <p>Website: <a href="https://shadeswash.netlify.app">https://shadeswash.netlify.app</a></p>
+                <p>GitHub: <a href="https://github.com/varlevi/ShadeSwash">https://github.com/varlevi/ShadeSwash</a></p>
+            </section>
+        </div>
+        <div class="content hidden" id="color-by-number-content">
+            <section class="header">
+                <h2><span>Color-By-Number Mosaic</span></h2>
+            </section>
+            <section class="description">
+                <p>Color-By-Number Mosaic is a fun little site that digitalizes color-by-number puzzles into a mosaic-like format.</p>
+            </section>
+            <section class="links">
+                <p>Website: <a href="https://colorbynumber.netlify.app/">https://colorbynumber.netlify.app/</a></p>
+                <p>GitHub: <a href="https://github.com/varlevi/color-by-number-mosaics">https://github.com/varlevi/color-by-number-mosaics</a></p>
+            </section>
+        </div>
+        <div class="content hidden" id="physics-calc-content">
+            <section class="header">
+                <h2><span>Physics Calculator</span></h2>
+            </section>
+            <section class="description">
+                <p>A selection of common physics calculations you can use to calculate simple physics problems.</p>
+            </section>
+            <section class="links">
+                <p>Website: <a href="https://physicscalculator.netlify.app/">https://physicscalculator.netlify.app/</a></p>
+                <p>GitHub: <a href="https://github.com/varlevi/physics-calculator">https://github.com/varlevi/physics-calculator</a></p>
+            </section>
+        </div>
     </div>
         
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" hidden>
@@ -38,7 +85,7 @@
     <script src="https://seattleowl.com/pointer.js/pointer.js"></script>
     <script>
         init_pointer({
-            pointerColor: "#348464", // Css color
+            pointerColor: "#d4413c", // Css color
             ringSize: 15, // Pixels
             ringClickSize: 10 // Pixels when clicking
         })

@@ -1,48 +1,15 @@
-// const shadeswash = document.querySelector('#shade-swash-blob');
-// const vscode = document.querySelector('#vs-code-blob');
-// const colorbynumber = document.querySelector('#color-by-number-blob');
-// const physicscalc = document.querySelector('#physics-calc-blob');
-const contentcontainer = document.querySelector('#content');
-let contentOpen = false;
-
-function newProjectContent(title, imageSrc, description, website, github) {
-        contentcontainer.innerHTML = "";
-        let content = contentcontainer;
-        let image = `<img src="${imageSrc}">`;
-        content.innerHTML += image;
-        content.innerHTML += `<h2>${title}</h2>`;
-        content.innerHTML += `<p>${description}</p>`;
-        content.innerHTML += `<p>Website: <a href="${website}">${website}</a></p>`;
-        content.innerHTML += `<p>GitHub: <a href="${github}">${github}</a></p>`;
-        content.classList += "content";
-}
-
-function newAboutContent(title, imageSrc, description, website, github) {
-    contentcontainer.innerHTML = "";
-    let content = contentcontainer;
-    let image = `<img src="${imageSrc}">`;
-    content.innerHTML += image;
-    content.innerHTML += `<h2>${title}</h2>`;
-    content.innerHTML += `<p>${description}</p>`;
-    content.innerHTML += `<p>Website: <a href="${website}">${website}</a></p>`;
-    content.innerHTML += `<p>GitHub: <a href="${github}">${github}</a></p>`;
-    content.classList += "content";
-}
-
-let blobsNodeList = document.querySelectorAll('.blob');
-let blobsArray = Array.from(blobsNodeList);
+const blobsNodeList = document.querySelectorAll('.blob');
+const blobsArray = Array.from(blobsNodeList);
+const contentNodeList = document.querySelectorAll('.content');
+const contentArray = Array.from(contentNodeList);
 
 blobsArray.forEach(function(blob, index) {
     blob.addEventListener('click', () => {
-        let contentTitle = blob.getAttribute('data-title');
-        let contentImageSrc = blob.getAttribute('data-image-src');
-        let contentDescription = blob.getAttribute('data-description');
-        let contentWebsite = blob.getAttribute('data-website');
-        let contentGithub = blob.getAttribute('data-github');
-        newProjectContent(contentTitle, contentImageSrc, contentDescription, contentWebsite, contentGithub)
+        contentArray.forEach(function(content, index) {
+            if (content.classList.contains("hidden") === false) {
+                content.classList.add("hidden");
+            }
+        })
+        contentArray[index].classList.toggle("hidden");
     })
 })
-
-
-
-let blobsNumber = blobsArray.length;

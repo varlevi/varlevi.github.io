@@ -10,8 +10,31 @@
     --blue-gray: #2C2C34;
     --brown: #4C3C34;
     --yellow: #FCAC6C;
-    --red-orange: #D4543C;
+    --red-orange: #d4413c;
     --blue-green: #348464;
+    --highlight: #d4413c55;
+}
+
+*::selection {
+    background: var(--highlight);
+}
+
+h1 {
+    position: relative;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    height: 15px;
+    background: var(--yellow);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    width: 95%;
+    z-index: -1;
+    transform: rotate(0.5deg);
 }
 
 /* LAYOUT */
@@ -30,7 +53,7 @@ html {
 }
 
 .blob {
-    background: var(--red-orange);
+    background: var(--yellow);
     line-height:100px;
     text-align:center;
     color:white;
@@ -55,6 +78,14 @@ html {
     font-size: 2.75vw;
     color: var(--dark);
     line-height: 1em;
+}
+
+.hidden {
+    display: none;
+}
+
+.description {
+    margin-bottom: 15px;
 }
 
 /* IMAGES */
@@ -96,20 +127,106 @@ h1 {
     font-weight: bold;
 }
 
+h2 {
+    font-size: 45px;
+    transform: rotate(-0.5deg);
+}
+
+h2 > span {
+    background-color: var(--yellow);
+    color: var(--dark);
+    padding: 15px; 
+    margin: auto;
+}
+
 p {
     padding: 0;
     margin: 0;
+    font-size: 18px;
+    line-height: 165%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--red-orange);
+    position: relative;
+}
+
+a::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    height: 1px;
+    width: 40%;
+    left: 30%;
+    background-color: var(--red-orange);
+    transition: 0.4s ease-out all .1s;
+}
+
+a:hover::after {
+    width: 90%;
+    left: 5%;
+    transition: 0.5s ease all;
 }
 
 /* MEDIA QUERY */
 
+@media (min-width: 800px) {
+    .blob {
+        width: 12vw;
+        height: 12vw;
+    }
+    .blob > p {
+        font-size: 1.5vw;
+    }
+    .content {
+        margin: auto;
+    }
+    .description,
+    .links {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media (min-width: 1000px) {
+    .blobs {
+        margin-bottom: 6vw;
+    }
     .blob {
         width: 8vw;
         height: 8vw;
     }
-    .blob > p {
-        font-size: 1.5vw;
+}
+
+@media (min-width: 1440px) {
+    .blob {
+        width: 6vw;
+        height: 6vw;
+    }
+}
+
+@media (min-width: 1280px) {
+    h1::before {
+        width: 80%;
+    }
+    .description,
+    .links {
+        width: 65%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .blobs {
+        margin-bottom: 4vw;
+    }
+    h1::before {
+        width: 60%;
+    }
+    .description,
+    .links {
+        width: 45%;
     }
 }
 
