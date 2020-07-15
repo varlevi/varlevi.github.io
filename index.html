@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Set character encoding -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Varlevi</title>
+    <!-- Sets initial site width to device width and scale to 100% -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Add Site Title -->
+    <title>Varlevi | The Directory</title>
+    <!-- Link to main css file -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Link to custom pointer css -->
     <link href="https://seattleowl.com/pointer.js/pointer.css" rel="stylesheet">
 </head>
+
 <body>
+    <!-- Start Blobs Menu -->
     <div class="blobs">
         <div class="blob" id="home-blob">
             <p>Home</p>
@@ -22,8 +29,10 @@
             <p>Physics Calculator</p>
         </div>
     </div>
+    <!-- End Blobs Menu -->
 
     <div id="contentcontainer">
+        <!-- Start Home Content -->
         <div class="content" id="home-content">
             <section class="header">
                 <h1>Welcome to The Directory</h1>
@@ -35,6 +44,8 @@
                 <p>GitHub: <a href="https://github.com/varlevi">https://github.com/varlevi</a></p>
             </section>
         </div>
+        <!-- End Home Content -->
+        <!-- Start ShadeSwash Content -->
         <div class="content hidden" id="shade-swash-content">
             <section class="header">
                 <h2><span>ShadeSwash</span></h2>
@@ -47,6 +58,8 @@
                 <p>GitHub: <a href="https://github.com/varlevi/ShadeSwash">https://github.com/varlevi/ShadeSwash</a></p>
             </section>
         </div>
+        <!-- End ShadeSwash Content -->
+        <!-- Start Color-By-Number Mosaic Content -->
         <div class="content hidden" id="color-by-number-content">
             <section class="header">
                 <h2><span>Color-By-Number Mosaic</span></h2>
@@ -59,6 +72,8 @@
                 <p>GitHub: <a href="https://github.com/varlevi/color-by-number-mosaics">https://github.com/varlevi/color-by-number-mosaics</a></p>
             </section>
         </div>
+        <!-- End Color-By-Number Mosaic Content -->
+        <!-- Start Physics Calculator Content -->
         <div class="content hidden" id="physics-calc-content">
             <section class="header">
                 <h2><span>Physics Calculator</span></h2>
@@ -71,18 +86,22 @@
                 <p>GitHub: <a href="https://github.com/varlevi/physics-calculator">https://github.com/varlevi/physics-calculator</a></p>
             </section>
         </div>
+        <!-- End Physics Calculator Content -->
     </div>
         
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" hidden>
-        <defs>
-            <filter id="goo">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-            <feBlend in="SourceGraphic" in2="goo" />
-            </filter>
-        </defs>
-        </svg>
+    <!-- SVG Filter for Blob Effect -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" hidden>
+    <defs>
+        <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+        <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+    </defs>
+    </svg>
+    <!-- Links to js script for pointer -->
     <script src="https://seattleowl.com/pointer.js/pointer.js"></script>
+    <!-- Initializes custom pointer -->
     <script>
         init_pointer({
             pointerColor: "#d4413c",
@@ -90,6 +109,7 @@
             ringClickSize: 10
         })
     </script>
+    <!-- Links to main javascript file -->
     <script src="script.js"></script>
 </body>
 </html>
