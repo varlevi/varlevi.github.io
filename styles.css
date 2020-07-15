@@ -23,7 +23,7 @@ html {
 }
 
 .blobs{
-    filter: url('#goo');
+    filter: url('#blob-filter');
     display: flex;
     flex-direction: row;
     justify-content: center;
