@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Varlevi</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://seattleowl.com/pointer.js/pointer.css" rel="stylesheet">
 </head>
 <body>
     <div class="blobs">
         <div class="blob" id="shade-swash-blob" data-title="ShadeSwash" data-image-src="images/shadeswash.svg" data-description="ShadeSwash is a simple web app design to make finding color shades easy and intuitive. Features like dark mode and support for color standards like RGB and HEX make it easy to use and help make sure you find the best shade of a color." data-website="https://shadeswash.netlify.app" data-github="https://github.com/varlevi/ShadeSwash">
             <p>ShadeSwash</p>
         </div>
-        <div class="blob" id="color-by-number-blob" data-title="" data-image-src="" data-description="">
+        <div class="blob" id="color-by-number-blob" data-title="Color-By-Number Mosaic" data-image-src="" data-description="It's COOL!">
             <p>Color-By-Number Mosaic</p>
         </div>
         <div class="blob" id="physics-calc-blob" data-title="" data-image-src="" data-description="">
@@ -34,6 +35,14 @@
             </filter>
         </defs>
         </svg>
+    <script src="https://seattleowl.com/pointer.js/pointer.js"></script>
+    <script>
+        init_pointer({
+            pointerColor: "#348464", // Css color
+            ringSize: 15, // Pixels
+            ringClickSize: 10 // Pixels when clicking
+        })
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

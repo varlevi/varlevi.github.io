@@ -5,7 +5,7 @@
 /*-- Global Page Styles --*/
 
 :root {
-    --dark: #020202;
+    --dark: #090c0e;
     --light: #FCFCFC;
     --blue-gray: #2C2C34;
     --brown: #4C3C34;
@@ -17,18 +17,7 @@
 /* LAYOUT */
 
 html { 
-    background: var(--dark); 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.content > p > a {
-    pointer-events: none;
-    cursor: cell;
-    text-decoration: none;
-    color: white;
+    background: var(--dark);
 }
 
 .blobs{
@@ -36,11 +25,12 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 25px 0;
+    margin-top: 3vw;
+    margin-bottom: 10vw;
 }
 
 .blob {
-    background: var(--light);
+    background: var(--red-orange);
     line-height:100px;
     text-align:center;
     color:white;
@@ -109,6 +99,18 @@ h1 {
 p {
     padding: 0;
     margin: 0;
+}
+
+/* MEDIA QUERY */
+
+@media (min-width: 1000px) {
+    .blob {
+        width: 8vw;
+        height: 8vw;
+    }
+    .blob > p {
+        font-size: 1.5vw;
+    }
 }
 
 /* ANIMATIONS */
